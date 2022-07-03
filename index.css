@@ -1,0 +1,82 @@
+* {
+  margin: 0;
+  padding: 0;
+  color: black;
+  background-color: white;
+  font-family: 'Courier New', Courier, monospace;
+  border: none;
+}
+
+#list{
+  width: calc(100% - 20px);
+  margin: 10px;
+
+  display: grid;
+  gap: 10px;
+  grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
+  grid-template-rows: repeat(auto-fill, minmax(300px, 1fr));
+
+}
+
+#list li{
+  list-style: none;
+  display: block;
+  padding: 10px;
+  border: 2px rgb(207, 207, 207) solid;
+  border-radius: 10px;
+  display: flex;
+  flex-direction:column;
+  height: 400px;
+}
+#list li>button{
+  width: 100%;
+  height: 100%;
+}
+#list li>button>img{
+  width: 70%;
+  height: 70%;
+}
+
+#list li pre{
+  flex: 1 1 auto;
+}
+#list li div{
+  border-top:1px rgb(207, 207, 207) solid;
+  display: flex;
+  justify-content: flex-end;
+}
+#list li div button{
+  flex: 1 1 auto;
+}
+
+dialog{
+  position: absolute;
+  top: 50%;
+  left:50%;
+  transform: translate(-50%,-50%);
+  flex-direction: column;
+  border: 2px rgb(207, 207, 207) solid;
+  border-radius: 10px;
+  width: 400px;
+  height: 50%;
+  padding: 10px;
+}
+dialog[open]{
+  display: flex;
+}
+dialog textarea{
+  flex: 1 1 auto;
+  outline: none;
+  resize: none;
+}
+dialog textarea:focus{
+  border-bottom: 1px aqua solid;
+}
+dialog div{
+  border-top: 1px rgb(207, 207, 207) solid;
+  display: flex;
+  justify-content: flex-end;
+}
+dialog div button{
+  flex: 1 1 auto;
+}
