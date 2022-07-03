@@ -26,8 +26,8 @@ const createListItem = (id, content, delete_, edit, bell, tfBell) => {
   //内容
   ContentBox.textContent = content
   //ボタンの追加
-  ToolBox.appendChild(MakeToolButton(delete_,"/img/delete.svg","delete"))
-  ToolBox.appendChild(MakeToolButton(edit, "/img/edit.svg", "edit"))
+  ToolBox.appendChild(MakeToolButton(delete_,"img/delete.svg","delete"))
+  ToolBox.appendChild(MakeToolButton(edit, "img/edit.svg", "edit"))
   //親要素に追加
   MainBox.appendChild(ContentBox)
   MainBox.appendChild(ToolBox)
@@ -125,7 +125,7 @@ const CreateAddItemButton = (click) => {
   ClickElement.onclick = click;
   ClickElement.appendChild((() => {
     const i = document.createElement("img")
-    i.src = "/img/add.svg"
+    i.src = "img/add.svg"
     i.alt = "create sticky note"
     return i
   })())
